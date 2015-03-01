@@ -26,4 +26,13 @@ var userSchema = new Schema({
 Page = mongoose.model('Page', pageSchema);
 User = mongoose.model('User', userSchema);
 
+//userSchema.virtual('full_route').get(function() {
+//  return this.name.first + ' ' + this.name.last;
+//});
+
+pageSchema.virtual('url_name.full').get(function () {
+    return this.url_name;
+});
+
+
 module.exports = {"Page": Page, "User": User};
