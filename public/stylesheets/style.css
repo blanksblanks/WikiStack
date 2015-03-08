@@ -6,3 +6,26 @@ body {
 a {
   color: #00B7FF;
 }
+
+/* Sticky footer! */
+* {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -1px;
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+.site-footer, .page-wrap:after {
+  height: 1px;
+}
+
+/* End of sticky footer */
