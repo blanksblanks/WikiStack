@@ -8,6 +8,8 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var add_routes = require('./routes/add');
+
 
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/wikistack');
@@ -31,6 +33,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
+app.use('/add', add_routes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
