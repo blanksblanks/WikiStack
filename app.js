@@ -1,5 +1,7 @@
 var express = require('express');
 var swig = require('swig');
+var filters = require('./filters')(swig);
+
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
@@ -9,6 +11,7 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var add_routes = require('./routes/add');
+
 
 
 var mongoose = require('mongoose');
