@@ -28,9 +28,9 @@ User = mongoose.model('User', userSchema);
 
 //userSchema.virtual('full_route').get(function() {
 //  return this.name.first + ' ' + this.name.last;
-//});
+//}); url_name.full
 
-pageSchema.virtual('url_name.full').get(function () {
+pageSchema.virtual('full_route').get(function () {
     return this.url_name;
 });
 
